@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested If | Javascript</title>
+</head>
+<body>
+    <h1>Nested If in Javascript</h1>
+
+    <script>
+        let marks = 100;
+        if(marks >=35){ // first when the first was true that condition goes to next condition
+            if(marks >=90){ // next values is check the certain condition .
+                console.log("Grade A")
+            }
+            else if(marks >=80){
+                console.log("Grade B")
+            } 
+            else{
+                console.log("Grade C")
+            }
+        }
+        else{ // when the firstly condition was false that prints else .
+            console.log("Fail")
+        }
+    </script>
+</body>
+</html>
