@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods | Javascript</title>
+</head>
+
+<body>
+    <h1>String Methods in Javascript</h1>
+
+    <script>
+        let name1 = " hello praveen welcome to javascript";
+        let name2 = " world ";
+
+        console.log(name1.concat(" ", name2)) // combine the two string values 
+        console.log(name1.length) // findout the length of character
+        console.log(name1.toLocaleUpperCase()) // words converts to capital
+        console.log(name1.toLowerCase()) // words converts to lowercase
+        console.log(name1.indexOf("o")) //prints the findout the index of that letter
+        console.log(name1.lastIndexOf('o')) //prints the findout the index of that letter
+        console.log(name1.charAt(1)) //prints the letter using index value
+        console.log(name1.charCodeAt("e")) //prints the ASCII values
+        console.log(name1.substring(0, 2)) // substring is used to slice the words using index based.
+        console.log(name1.slice(1, 3)) // slice the ords using index based
+        console.log(name1.split(" ")) // split the each word and converts into array format.
+        console.log(name1.replace("praveen", "bro")) // get two parameter first one current value and second update vale.
+        let data = ["india", "america", "russia"]
+        console.log(data.includes("india")) // is used to we verify when the particular value is there in an array.
+        console.log(name2.trim()) // remove unwanted spaces
+        console.log(name2.padStart(20,0)) //padstart helps to we can add anything before the word
+        console.log(name2.padEnd(20,0)) //padstart helps to we can add anything after the word
+
+
+
+
+    </script>
+</body>
+
+</html>
