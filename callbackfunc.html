@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function | Javascript</title>
+</head>
+<body>
+    <h1>CallBack Function in Javascript</h1>
+
+    <script>
+        function main(){ // it is called function by child like higher order function
+            console.log("Iam call from another Function")
+        }
+        function data(val){ // it is a higher order function because it call another function as a parameter
+            val()
+        }
+        data(main) // pass the function as a parameter
+
+    </script>
+</body>
+</html>

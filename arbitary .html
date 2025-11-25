@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbitary | Javascript</title>
+</head>
+<body>
+    <h1>Arbitary in Javascript </h1>
+
+    <script>
+        function add(...args){ // aribatary is used to in rutime of program we can pass multiple arguments for that function
+            let value =0;
+            for(let i =0;i<args.length;i++){
+                value += args[i]
+                 
+            }
+           console.log(value)
+            
+        }
+        add(20,20,30,33)
+
+    </script>
+</body>
+</html>
