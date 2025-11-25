@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish coalescing operator</title>
+</head>
+<body>
+
+    <h1>Nullish coalescing operator in Javascript</h1>
+
+    <script>
+        let user = null??"Hello"; // nullish operator is used to which varible have undefined or null this ?? use to add additional value .
+        console.log(user)
+
+        //nullish with object
+        let user1 = {
+            name:"vin",
+            
+        }
+        console.log(user.age??=20)//assign the value when the object.value is nott found 
+        console.log(user1)
+    </script>
+    
+</body>
+</html>
