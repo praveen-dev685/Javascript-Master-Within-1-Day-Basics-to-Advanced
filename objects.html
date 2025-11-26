@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects | Javascript</title>
+</head>
+
+<body>
+    <h1>Objects in Javascript</h1>
+
+    <script>
+        //Create an object 
+        let data = {
+            name: "hello", // objects only based on key and pair values
+            age: 20,
+        }
+        //function based object
+
+        function user(name, age, roll, district) {
+            return {
+                name: name,
+                age: age,
+                roll: roll,
+                district: district,
+                elgible: age > 18 ? "Eligible" : "Not Eligible",
+
+            }
+
+        }
+        console.log(user("hello", 20, 15, "villupuram"))
+        console.log(user("hello", 20, 15, "chennai"))
+
+        // add , delete , update a object values
+
+        const data1 = {
+            name: "Vinzo",
+            age: 23,
+            state: "tamilnadu",
+        }
+        console.log(data1) // before change a values in an object
+        data1.name = "praveen"  // it is update a values of object name
+        data1["country"] = "india"; // its is add new key and pair in an object
+        delete data1.age;  // delete an object value
+        console.log(data1)// after change a values in an object
+
+
+        //Optional in Object  symbol( ?. )
+        /* it is used to if user or data was missing in the key of object that program will be
+        crash by single error so we use optional chaining for handle that error. */
+
+        const user1 = {
+            name: "Praveen",
+            skills: {
+                frontend: {
+                    html: true,
+                    css: true,
+                    javascript: true
+                },
+                backend: {
+                    python: true,
+                    django: false
+                }
+            }
+        };
+
+        console.log(user1.skills?.frontend?.css) //read the value
+        console.log(delete user1.skills?.frontend?.css) // delete the value
+        console.log(user1)
+
+
+        // Function inside object
+
+        let val = {
+            name:"praveen",
+            age:20,
+            status:()=>{
+                return true
+            }
+        }
+        console.log("Status : ",val.status())
+
+
+
+
+    </script>
+</body>
+
+</html>

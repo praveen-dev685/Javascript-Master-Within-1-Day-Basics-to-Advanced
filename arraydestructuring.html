@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring | Javascript</title>
+</head>
+
+<body>
+    <h1>Array Destructuring in Javascript</h1>
+
+    <script>
+        let [a, b, c, d, e] = [1, 2, 3, 4, 5] // array destructuring
+        let [f, g, ...remaining] = [1, 2, 3, 4, 5] // array destructuring with spread operator
+        console.log([a, b, c, d, e])
+        console.log([f, g, ...remaining])
+
+        let obj = { 
+            name: "praveen", 
+            age: 20 ,
+        }
+
+        let {name,age} = obj  // object destructuring
+        console.log(obj)
+        let {...object} = obj // object destructuring with spread operator
+        console.log(obj)
+
+
+    </script>
+</body>
+
+</html>
