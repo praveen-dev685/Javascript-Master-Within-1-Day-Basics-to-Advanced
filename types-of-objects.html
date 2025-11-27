@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Creating Objects | Javascript</title>
+</head>
+<body>
+    <h1>Types of Creating Objects in Javascript</h1>
+    
+    <script>
+        //method 1 normal method
+        let user1 = {
+            name:"praveen",
+            age:20,
+        }
+        console.log(user1)
+
+        //method 2 
+        let user2 = new Object();
+        user2.name = "praveen";
+        user2.age = 20;
+        console.log(user2)
+
+        //method 3
+        let user3 = {
+
+        }
+        let objproto = Object.create(user3);
+        objproto.name = "praveen";
+        objproto.age = 20;
+        console.log(objproto)
+        
+        //method 4 using class
+        class User4 {
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+        }
+        let data = new User4("praveen",20)
+        console.log(data)
+
+        //Objects iteratings
+        let values = {
+            name:"praveen",
+            age:20,
+            role:"Full stack developer",
+        }
+        let objKeys = Object.keys(values) // only gets keys of object
+        console.log(objKeys)
+
+        let objValues = Object.values(values); // only gets values of objects
+        console.log(objValues)
+
+        let objEntries = Object.entries(values);// gets both of key and pair by array format.
+        console.log(objEntries)
+
+       
+        
+        
+        
+       
+    </script>
+</body>
+</html>

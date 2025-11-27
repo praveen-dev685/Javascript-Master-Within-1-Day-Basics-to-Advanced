@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtoType | Javascript</title>
+</head>
+<body>
+    <h1>ProtoType in Javascript</h1>
+
+    <script>
+        let a = {
+            name:"praveen",
+            age:20,
+        }
+        let b = Object.create(a); // this is prototype . prototye of object can inherit from their parent values.
+        console.log(b);
+
+        // check in browser inside console tab "Object.__proto__"
+        let arr = [1,2]
+
+        let sum = Array.prototype.sum = (data)=>{
+            let total = 0;
+            data.map((value)=>{
+                total+=value
+            })
+            return total
+        }
+
+        let values = sum(arr)
+    </script>
+</body>
+</html>

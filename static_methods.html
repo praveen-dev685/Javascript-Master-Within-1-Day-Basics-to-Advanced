@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static methods | Javascript</title>
+</head>
+<body>
+    <h1>Static methods in Javascript</h1>
+
+    <script>
+        class Data{
+            static variable = "praveen" // it is static variable is used to same of static method.
+            static method(){ // statics is a keyword is used to we can access the this function globally without object.
+                console.log("Hello Boy")
+            }
+        }
+        Data.method()
+        console.log(Data.variable)
+    </script>
+</body>
+</html>

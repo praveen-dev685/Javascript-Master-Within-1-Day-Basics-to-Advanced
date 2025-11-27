@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class | Javascript</title>
+</head>
+<body>
+    <h1>Class in Javascript</h1>
+
+    <script>
+        class Welcome{ // it is class syntax in javascript changed after ES6 version oj js.
+            constructor(name){ // constructor is basically runs automatically  when call the class name
+                this.name = name; // this means "you get the value from current function or object"
+            }
+            hello(){
+                console.log("Welcome to Javascript ",this.name);
+            }
+        }
+        let user1 = new Welcome("praveen");
+        user1.hello()
+
+        //Inheritence from from class
+
+        class Home extends Welcome{
+            constructor(name,age){
+                super(name)
+                this.age = age;
+            }
+            eligibility(){
+                console.log(`Your name is ${this.name} and Your age is ${this.age}`)
+            }
+        }
+
+        let rec1 = new Home("praveen",21)
+        rec1.eligibility()
+
+    </script>
+</body>
+</html>
