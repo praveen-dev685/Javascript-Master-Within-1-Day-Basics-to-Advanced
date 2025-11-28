@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listensers | Javascript</title>
+</head>
+<style>
+    div{
+        height: 300px;
+        width: 300px;
+        background-color: red;
+    }
+</style>
+<body>
+
+    <button id="btn">Click Me</button>
+    <!-- <form action="#" id="form">
+        <input type="text" id="input">
+        <select name="" id="select">
+            <option value="1name">1name</option>
+            <option value="2name">2name</option>
+            <option value="3name">3name</option>
+            <option value="4name">4name</option>
+            <option value="5name">5name</option>
+        </select>
+        <input type="checkbox" name="" id="check">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form> -->
+    <div id="div"></div>
+    <script>
+        //1. Mouse Events
+        let btn = document.getElementById("btn")
+        // btn.addEventListener("click",()=>{ //click event when click the button event will triggred
+        //     alert("Click event Triggred")
+        // })
+
+        //  btn.addEventListener("dblclick",()=>{ //double click event when click the button event will triggred
+        //     alert("double Click event Triggred")
+        // })
+
+        //  btn.addEventListener("mousedown",()=>{ //mousedown event when one click the button event will triggred
+        //     alert("mousedown event Triggred")
+        // })
+
+        // btn.addEventListener("mouseout",()=>{ //mouseout event when one unhover the button event will triggred
+        //     alert("mouseout event Triggred")
+        // })
+
+        // btn.addEventListener("mouseup",()=>{ //mouseup event when release the  longpress the button event will triggred
+        //     alert("mouseup event Triggred")
+        // })
+
+        // btn.addEventListener("mouseover",()=>{ //mouseover event when hover the button event will triggred
+        //     alert("mouseover event Triggred")
+        // })
+
+        //2 Keyboard events
+
+        // let body = document.querySelector("body")
+        // // body.addEventListener("keypress",(e)=>{    //react pressed the key
+        // //     console.log(e.type)
+        // //     console.log(e.code)
+        // //     btn.innerHTML += (e.key)
+        // // })
+        // // body.addEventListener("keyup",(e)=>{ //react after released the key
+        // //     console.log(e.type)
+        // //     console.log(e.code)
+        // //     btn.innerHTML += (e.key)
+        // // })
+        // body.addEventListener("keydown",(e)=>{ //react pressed the key
+        //     console.log(e.type)
+        //     console.log(e.code)
+        //     btn.innerHTML += (e.key)
+        // })
+
+        // 3 Form events
+      /*   let form = document.getElementById("form")
+        let select = document.getElementById("select")
+        let input = document.getElementById("input");
+        let check = document.getElementById("check");
+        form.addEventListener("submit", (events) => {
+            //submit event is helsp to we  have a form  use this .helps to get the value.
+            events.preventDefault(); //helps to prevent the defaultrefresh and data.
+            console.log(input.value)
+            // if (check.checked) {
+            //     alert("Accepted terms and Conditions")
+            // }
+            // else{
+            //     alert("Not Accepted terms and Conditions")
+
+            // }
+
+        })
+        select.addEventListener("change", (e) => {
+            console.log(e.target.value) //used to select or datalist tags data gets.
+        })
+
+        form.addEventListener("reset", (e) => { //custom reset form 
+            console.log("Reseted")
+        })
+
+        check.addEventListener('change',(e)=>{
+            if(e.target.checked){
+                alert("Checked")
+            }
+            else{
+                alert("Unchecked")
+            }
+        })
+
+        input.addEventListener("input",(e)=>{ // enter any value inside input box each and every letter will be listened.
+
+            console.log(e.target.value)
+        })
+ */
+
+/*  //4 Touch events
+ let div = document.getElementById("div");
+ div.addEventListener("touchstart",(e)=>{
+    e.preventDefault();
+    div.style.backgroundColor="blue"; //touchstart is like click event but is only works for mobile.
+ })
+
+ div.addEventListener("touchmove",(e)=>{
+    e.preventDefault();
+    div.style.backgroundColor="green"; //touchmove is like scrolling on mobile  but is only works for mobile.
+ })
+
+ div.addEventListener("touchend",(e)=>{
+    e.preventDefault();
+    div.style.backgroundColor="yellow"; //touchend is like after release you finger on mobile  but is only works for mobile.
+ })
+    
+ div.addEventListener("touchcancel",(e)=>{
+    e.preventDefault();
+    div.style.backgroundColor="purple"; //touchcancel is like we leave that page or use back in mobile  but is only works for mobile.
+ })
+
+ */
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

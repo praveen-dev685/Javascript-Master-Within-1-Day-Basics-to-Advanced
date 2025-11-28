@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Javascript</title>
+</head>
+
+<body>
+    <!-- <h1>DOM in Javascript</h1> -->
+
+    <section>
+        <h1>this is h1</h1>
+        <div>
+            <h2>this is h2</h2>
+            <p>this is para</p>
+        </div>
+    </section>
+
+    <script>
+        //HtmlCollecion is the dynamic content changeale 
+        //Nodelist is static content
+
+        let data = document.getElementsByTagName("h1");
+        let value = data[0].parentNode;
+        value.style.backgroundColor = "red";
+
+        //Node in Dom
+        let parent = value.firstChild
+        console.log(parent)
+        let parent1 = value.lastChild
+        console.log(parent1)
+
+        let parentElement = document.getElementsByTagName("section");
+        let child = parentElement[0].firstElementChild;
+        let lastchild = parentElement[0].lastElementChild;
+        console.log(lastchild)
+        
+        let div = document.getElementsByTagName("div")[0];
+        let datas1 = div.children[1];
+        console.log(datas1)
+
+
+    </script>
+
+</body>
+
+</html>

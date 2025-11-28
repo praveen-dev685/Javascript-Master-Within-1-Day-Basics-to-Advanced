@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM functions | Javascript</title>
+</head>
+<style>
+    .dark{
+        background-color: black;
+        color: white;
+    }
+</style>
+<body class="box">
+    <button>Add</button>
+    <button>remove</button>
+    <button>toggle</button>
+
+    <input type="text" id="input" class="name">
+    <button id="check" >Check</button>
+    
+
+    <script>
+        //CreateElement
+        let data = document.createElement("h1") //create element is used to create an element 
+        data.innerText = "Hello World";
+        let body = document.querySelector("body")
+        body.appendChild(data)// appendchild is used to push the element to the inside body
+
+         //insertbefore
+         let h2 = document.createElement("h2");
+         h2.innerHTML = "this is h2";
+         body.insertBefore(h2,data) // it helps to add any element before the ignore value
+
+         //style
+         data.style.color = "rgb(234,73,228)" //style is helps to we can access css properties inside javascript.
+
+         //innertext
+         data.innerText = "Welcome"; //innertext is helps to change the text of element
+
+         //innerHTML
+         data.innerHTML = "Hello<i>World</i>" //innerhtml is also innertext but we give tags inside this it consider it.
+
+         ///cloneNode
+         let val = data.cloneNode(true) // cloneNoe is helps to clone the tag values
+         body.appendChild(val)
+
+        //  setInterval
+        let count=0
+        setInterval(()=>{
+            let date = new Date()
+            data.innerHTML = (`Time : ${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`) //setinterval is used to call he function or variable each 1 second
+        },900)
+
+        //classlist add,remove,toggle
+
+        let btn = document.querySelectorAll("button")
+        let box = document.querySelector(".box")
+        btn[0].addEventListener("click",()=>{
+            box.classList.add("dark") //add classlist 
+        })
+        btn[1].addEventListener("click",()=>{
+            box.classList.remove("dark") //remove classlist
+        })
+        btn[2].addEventListener("click",()=>{
+            box.classList.toggle("dark") //both 
+        })
+
+        //get and set attribute
+        let input = document.getElementById("input")
+        let button = document.querySelector("#check")
+        button.addEventListener("click",()=>{
+            let attribute = input.getAttribute("type")
+            if(attribute=="text"){
+                input.setAttribute("type","password")
+            }
+            else{
+                 input.setAttribute("type","text")
+            }
+        })
+
+        console.log(input.hasAttribute("id"))
+        input.removeAttribute("id")
+        console.log(input.getAttributeNames())
+        console.log(input.getAttributeNames(input))
+
+    </script>
+</body>
+</html>
