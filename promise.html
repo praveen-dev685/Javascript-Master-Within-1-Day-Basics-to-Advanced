@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise | Javascript</title>
+</head>
+<body>
+    <h1>Promise in Javascript</h1>
+    <button id="getData">Click it</button>
+
+    <script>
+        //promise is used to when it is try to resolve the problem if solved value comes in then else catch
+
+        let getData = document.getElementById("getData");
+
+        getData.addEventListener("click",(e)=>{
+            let promise = new Promise((resolve,reject)=>{
+                if(e){
+                    resolve(e)
+                }
+                else{
+                    reject("E is not found")
+                }
+            }).then((message)=>{
+                console.log(message)
+            }).catch((err)=>{
+                console.error(err)
+            }).finally(()=>{
+                console.log("I am always runner")
+            })
+        })
+
+        
+
+       
+       
+    </script>
+</body>
+</html>
